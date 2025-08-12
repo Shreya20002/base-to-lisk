@@ -1,6 +1,7 @@
 {
-  "buildCommand": "yarn workspace @se-2/nextjs build",
-  "devCommand": "yarn workspace @se-2/nextjs dev",
-  "installCommand": "yarn install",
-  "outputDirectory": "packages/nextjs/.next"
+  "buildCommand": "cd packages/nextjs && yarn build",
+  "devCommand": "cd packages/nextjs && yarn dev", 
+  "installCommand": "yarn install --frozen-lockfile",
+  "outputDirectory": "packages/nextjs/.next",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD packages/nextjs/"
 }
